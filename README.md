@@ -1,23 +1,25 @@
-Sublime Text SM RAD Package
+#Sublime Text SM RAD Package
 ======
 
 
-Features
+##Features
 
-Syntax highlighting for .rad files
-Highlighting errors
+*Syntax highlighting for .rad files
+*Highlighting errors
 
-Installation
+##Installation
 
 With Package Control (recommended):
 
-Run "Package Control: Install Package" command, find and install SilverStripe plugin.
-Restart Sublime Text
+1.Run "Package Control: Install Package" command, find and install SilverStripe plugin.
+2.Restart Sublime Text
 
-Snippets
+##Snippets
 
 Press tab after typing any of the following to generate markup:
 
-Template files
+*if then
 
-if
+##Template files
+
+*if
