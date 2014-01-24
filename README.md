@@ -1,8 +1,7 @@
 #Sublime Text SM RAD Package
 ##Features
-
-Syntax highlighting for .rad files
-Highlighting errors
+* Syntax highlighting for .rad files
+* Highlighting errors
 ##Installation
 
 With Package Control (recommended):
