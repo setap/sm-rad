@@ -10,3 +10,4 @@ With Package Control (recommended):
 1. Run "Package Control: Install Package" command, find and install SilverStripe plugin.
 2. Restart Sublime Text
 
+Test file 'test.rad'
