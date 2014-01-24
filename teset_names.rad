@@ -1,0 +1,13 @@
+if (status in $L.file="reopened") then ($L.save.mode="reopen");if ($L.mode="addonestep") then ($L.save.mode="add";$L.void=fduplicate($L.file.save, $L.file));if ($L.mode="addsave") then ($L.save.mode="add");$L.save.mode=nullsub($L.save.mode, "update")
+journal.pm.order in $G.pm.global.environment=nullsub(journal.pm.order in $G.pm.global.environment, 1)
+
+if ($G.bg and not  (null($G.bg.activity.type))) then ($pmc.actions=nullsub($G.bg.activity.text, {"No update provided."});$apm.activity=nullsub($G.bg.activity.type, $apm.activity);$apm.activity=nullsub($apm.activity, "external update"))
+if same(nullsub(full.name in $G.pm.environment, full.name in $G.pm.global.environment), true) then ($L.operator=nullsub($lo.ufname, nullsub(operator(), "NULL"))) else ($L.operator=nullsub(operator(), "NULL"))
+$L.stamp=str(tod())+" ("+$L.operator+"):";if exit in $G.pm.global.environment then ($L.stamp=str(tod())+" "+$lo.time.zone+" ("+$L.operator+"):")
+$L.operator.clock.name="Time locked by : "+operator()
+if($L.save.mode~="add" and journal.pm in $G.pm.global.environment and journal.pm.order in $G.pm.global.environment=2 and (lng(denull($pmc.actions))>1 or denull($pmc.actions)~={""} and denull($pmc.actions~={}))) then ($L.pos=lng(denull(update.action in $L.file))+1;$L.pos in update.action in $L.file=$L.stamp)
+if ($L.save.mode~="add" and journal.pm in $G.pm.global.environment and journal.pm.order in $G.pm.global.environment=1 and (lng(denull($pmc.actions))>1 or denull($pmc.actions)~={""})) then (update.action in $L.file=denull($pmc.actions)+denull(update.action in $L.file))
+if ($L.save.mode~="add" and journal.pm in $G.pm.global.environment and journal.pm.order in $G.pm.global.environment=1 and (lng(denull($pmc.actions))>1 or denull($pmc.actions)~={""} and denull($pmc.actions~={}))) then (update.action in $L.file=insert(update.action in $L.file, 1, 1, $L.stamp))
+if ($L.save.mode~="add" and journal.pm in $G.pm.global.environment and journal.pm.order in $G.pm.global.environment=2 and (lng(denull($pmc.actions))>1 or denull($pmc.actions)~={""})) then (update.action in $L.file=denull(update.action in $L.file)+denull($pmc.actions))
+
+if (condition) then (content) ; ()

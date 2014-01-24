@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[if (${1:condition}) then (${2:content});]]></content>
+    <tabTrigger>if</tabTrigger>
+    <scope>source.rad</scope>
+    <description>RAD if statement</description>
+</snippet>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>rad</string>
+	</array>
+	<key>name</key>
+	<string>rad</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>match</key>
+			<string>\b(if|then|while|do|and|or|in)(?!\()\b</string>
+			<key>name</key>
+			<string>keyword.rad</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.rad</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Tab stops like $1, $2...</string>
+			<key>match</key>
+			<string>(\$[A-Za-z][A-Za-z0-9_.]+)</string>
+			<key>name</key>
+			<string>variable.rad</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.rad</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Tab stops like $1, $2...</string>
+			<key>match</key>
+			<string>(\; [A-Za-z0-9_$])</string>
+			<key>name</key>
+			<string>invalid.rad</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.rad</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Tab stops like $1, $2...</string>
+			<key>match</key>
+			<string>\b(if\()</string>
+			<key>name</key>
+			<string>invalid.rad</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.rad</string>
+	<key>uuid</key>
+	<string>8c8714d5-43ef-43d2-abd9-c9088901ddd5</string>
+</dict>
+</plist>

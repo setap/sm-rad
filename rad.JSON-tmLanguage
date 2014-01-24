@@ -1,0 +1,33 @@
+{ 
+    "name": "rad",
+    "scopeName": "source.rad",
+    "fileTypes": ["rad"],
+    "patterns": [
+    {
+      "match": "\\b(if|then|while|do|and|or|in)(?!\\()\\b",
+      "name": "keyword.rad"
+    },
+    { "match": "(\\$[A-Za-z][A-Za-z0-9_.]+)",
+      "name": "variable.rad",
+      "captures": {
+          "1": { "name": "constant.numeric.rad" }
+       },
+      "comment": "Tab stops like $1, $2..."
+    },
+    { "match": "(\\; [A-Za-z0-9_$])",
+      "name": "invalid.rad",
+      "captures": {
+          "1": { "name": "constant.numeric.rad" }
+       },
+      "comment": "Tab stops like $1, $2..."
+    },
+    { "match": "\\b(if\\()",
+      "name": "invalid.rad",
+      "captures": {
+          "1": { "name": "constant.numeric.rad" }
+       },
+      "comment": "Tab stops like $1, $2..."
+    }
+    ],
+    "uuid": "8c8714d5-43ef-43d2-abd9-c9088901ddd5"
+}

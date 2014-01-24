@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[\$${1:type}.]]></content>
+    <tabTrigger>$</tabTrigger>
+    <scope>source.rad</scope>
+    <description>RAD variable</description>
+</snippet>
